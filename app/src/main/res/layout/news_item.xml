@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="350dp">
+
+    <ImageView
+        android:id="@+id/ivThumbnail"
+        android:layout_width="194dp"
+        android:layout_height="142dp"
+        android:src="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/cd_news_image" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Seleção Brasileira Campeã Mundial"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivThumbnail" />
+
+    <TextView
+        android:id="@+id/tvDescripton"
+        android:layout_width="389dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="8dp"
+        android:text="Seleção Brasileira conquistou seu primeiro campeonato mundial sobre a equipe dos EUA."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btOpenLink"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="64dp"
+        android:text="@string/txt_open_link"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescripton" />
+
+    <ImageView
+        android:id="@+id/ivFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:contentDescription="@string/cd_favorite_icon"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btOpenLink"
+        app:layout_constraintStart_toEndOf="@+id/btOpenLink"
+        app:layout_constraintTop_toTopOf="@+id/btOpenLink"
+        app:layout_constraintVertical_bias="0.416"
+        app:srcCompat="@drawable/ic_baseline_favorite_24"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/ivShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:contentDescription="@string/cd_share_icon"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFavorite"
+        app:layout_constraintStart_toEndOf="@+id/ivFavorite"
+        app:layout_constraintTop_toTopOf="@+id/ivFavorite"
+        app:srcCompat="@drawable/ic_share" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
